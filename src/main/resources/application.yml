@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/claWard
+    username: root
+    password: anna0715
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        default_batch_fetch_size: 1000
+
+  sql:
+    init:
+      mode: never
+
+
+# rds용
+# spring:
+#   datasource:
+#     url: jdbc:mysql://zipdabang-db.claedpluhwyw.ap-northeast-2.rds.amazonaws.com:3306/study
+#     username: 님들의 rds 루트 유저 이름
+#     password: 님들의 rds 비밀번호
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+#   sql:
+#     init:
+#       mode: never
+#   jpa:
+#     properties:
+#       hibernate:
+#         dialect: org.hibernate.dialect.MySQL8Dialect
+#         show_sql: true
+#         format_sql: true
+#         use_sql_comments: true
+#         hbm2ddl:
+#           auto: update
+#         default_batch_fetch_size: 1000
