@@ -35,3 +35,53 @@ out/
 
 ### VS Code ###
 .vscode/
+
+###업로드된 파일 무시 ###
+src/main/resources/static/uploads/
+
+
+# --- 공통 ---
+.DS_Store
+*.log
+*.tmp
+*.swp
+*.swo
+
+# --- Node (프론트엔드) ---
+/frontend/node_modules
+/frontend/.env
+/frontend/build
+/frontend/dist
+/frontend/.next
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# --- Java / Gradle (백엔드) ---
+/api/build/
+/api/out/
+/api/.classpath
+/api/.project
+/api/.settings/
+/api/.gradle
+/api/.idea/
+/api/.env
+*.iml
+
+# --- Gradle 캐시 ---
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# --- IntelliJ & VSCode ---
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+
+# --- 로그 파일 ---
+*.log
+
+# --- 환경 파일 ---
+.env

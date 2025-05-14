@@ -23,4 +23,6 @@ public class MemberPost {
     @ManyToOne
     @JoinColumn(name = "post_id") // 🔥 마찬가지로 명시
     private Post post;
+
+
 }

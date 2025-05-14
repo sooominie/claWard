@@ -23,51 +23,44 @@ public class Member implements UserDetails {
     private Long id;
 
     @Column(nullable = false, unique = true, length = 100)
-    private String username;
+    private String email;
 
     @Column(nullable = false, length = 100)
     private String password;
-
-    @Column(length = 100)
-    private String email;
 
     @Builder.Default
     @Column(name = "created_at")
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    //  UserDetails 필수 메서드 구현
+    // 🔒 UserDetails 메서드 구현
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.emptyList(); // 또는 ROLE 부여
+        return Collections.emptyList(); // 권한은 없다고 처리
     }
 
     @Override
     public String getUsername() {
-        return this.username;
+        return this.email; // email을 username 대용으로 사용
     }
 
     @Override public String getPassword() {
         return this.password;
     }
 
-    @Override
-    public boolean isAccountNonExpired() {
+    @Override public boolean isAccountNonExpired() {
         return true;
     }
 
-    @Override
-    public boolean isAccountNonLocked() {
+    @Override public boolean isAccountNonLocked() {
         return true;
     }
 
-    @Override
-    public boolean isCredentialsNonExpired() {
+    @Override public boolean isCredentialsNonExpired() {
         return true;
     }
 
-    @Override
-    public boolean isEnabled() {
+    @Override public boolean isEnabled() {
         return true;
     }
 }

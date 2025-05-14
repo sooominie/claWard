@@ -10,6 +10,7 @@ import min.claWard.domain.Member;             // 연관 엔티티
 import min.claWard.domain.UploadFile;         // 연관 엔티티
 
 
+
 @Entity
 @Table(name = "post")
 @Getter @Setter
@@ -43,4 +44,13 @@ public class Post {
     @Builder.Default
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     private List<UploadFile> files = new ArrayList<>();
+
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
 }
+
+

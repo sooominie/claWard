@@ -7,6 +7,7 @@ import min.claWard.web.dto.MemberLoginRequest;
 
 public interface MemberService {
     Member register(MemberSignupRequest request);
-    Member login(MemberLoginRequest request);
+    String login(MemberLoginRequest request); // JWT 반환
 }
+
 

@@ -1,8 +1,8 @@
 package min.claWard.web.dto;
 
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 public class PostCreateRequest {
     private String title;
     private String content;

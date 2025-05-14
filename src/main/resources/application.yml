@@ -8,6 +8,10 @@ spring:
     password: anna0715
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+jwt:
+  secret: your-very-secret-jwt-key-here-should-be-256-bits
+
+
   jpa:
     hibernate:
       ddl-auto: update
